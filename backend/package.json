@@ -1,0 +1,16 @@
+{
+  "name": "lan-file-server",
+  "version": "1.0.0",
+  "description": "A local file server that uses the harddisk mounted in the machine for storing file uploaded by the devices connected in the local area network.",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "author": "Kannan G R",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
