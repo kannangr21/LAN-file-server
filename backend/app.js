@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
+app.use(cors(["*"]));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const upload = require("./services/fileUpload");
@@ -9,8 +11,6 @@ const upload = require("./services/fileUpload");
 app.use("/uploads", express.static("../uploads"));
 
 app.post("/upload", upload.array(), (req, res) => {
-  console.log(req.file);
-  console.log("Here");
   return res.status(200).json({
     message: "Gotcha!",
   });
